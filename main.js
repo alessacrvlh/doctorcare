@@ -17,8 +17,8 @@ function activateMenuAtCurrentSection() {
   //passou?
   //coleta de dados
 
-  const sectionTop = home.offsetTop
-  const sectionHeight = home.offsetHeight
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
   const sectionTopRachOrPassedTargetLine = targetLine >= sectionTop
 
   // verificar se a base está abaixo da linha alvo
@@ -33,6 +33,7 @@ function activateMenuAtCurrentSection() {
   const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
 
   menuElement.classList.remove('active')
+
   if (sectionBoundaries) {
     menuElement.classList.add('active')
   }
@@ -76,5 +77,3 @@ ScrollReveal({
   #about, 
   #about header, 
   #about .content`)
-
-//function sayMyName { }
